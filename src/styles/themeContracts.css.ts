@@ -17,10 +17,23 @@ const size = {
   xl: null,
 };
 
+const typographySize = {
+  h1: null,
+  h2: null,
+  h3: null,
+  h4: null,
+  h5: null,
+  h6: null,
+  body: null,
+  small: null,
+};
+
+
 export const themeContract = createThemeContract({
   spacing: size,
   blur: size,
   borderRadius: size,
+  text: typographySize
 });
 
 export const colorSchemeContract = createThemeContract({

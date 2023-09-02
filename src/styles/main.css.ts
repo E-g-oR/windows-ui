@@ -24,6 +24,16 @@ export const theme = createTheme(themeContract, {
     lg: sizeRelative(10),
     xl: sizeRelative(15),
   },
+  text: {
+    h1: sizeRelative(66),
+    h2: sizeRelative(56),
+    h3: sizeRelative(46),
+    h4: sizeRelative(36),
+    h5: sizeRelative(26),
+    h6: sizeRelative(16),
+    body: sizeRelative(16),
+    small: sizeRelative(13),
+  },
 });
 
 export const appClassName = style({
