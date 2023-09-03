@@ -1,8 +1,8 @@
-import { style, createTheme } from "@vanilla-extract/css";
+import { style, createGlobalTheme, globalStyle } from "@vanilla-extract/css";
 import { themeContract } from "./themeContracts.css";
-import { sizeRelative } from "../utils/etc";
+import { sizeRelative } from "@utils/etc";
 
-export const theme = createTheme(themeContract, {
+export const theme = createGlobalTheme(":root", themeContract, {
   spacing: {
     xs: sizeRelative(8),
     sm: sizeRelative(12),
@@ -38,4 +38,10 @@ export const theme = createTheme(themeContract, {
 
 export const appClassName = style({
   fontFamily: "sans-serif",
+});
+
+globalStyle("*", {
+  padding: 0,
+  margin: 0,
+  boxSizing: "border-box"
 });

@@ -1,21 +1,6 @@
-import { defineProperties } from "@vanilla-extract/sprinkles";
+import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
 import { themeContract } from "./themeContracts.css";
-import { createSprinkles } from "@vanilla-extract/sprinkles/createRuntimeSprinkles";
-
-export const alignItems = [
-  "stretch",
-  "flex-start",
-  "center",
-  "flex-end",
-] as const;
-export const justifyContent = [
-  "stretch",
-  "flex-start",
-  "center",
-  "flex-end",
-  "space-around",
-  "space-between",
-] as const;
+import { alignItems, justifyContent, fontWeight } from "@utils/constants";
 
 const responsiveProperties = defineProperties({
   conditions: {
@@ -29,27 +14,46 @@ const responsiveProperties = defineProperties({
     flexDirection: ["row", "column"],
     justifyContent,
     alignItems,
+
     paddingTop: themeContract.spacing,
     paddingBottom: themeContract.spacing,
     paddingLeft: themeContract.spacing,
     paddingRight: themeContract.spacing,
+    marginTop: themeContract.spacing,
+    marginBottom: themeContract.spacing,
+    marginLeft: themeContract.spacing,
+    marginRight: themeContract.spacing,
+
     fontSize: themeContract.text,
+
+    fontWeight,
+
     borderTopLeftRadius: themeContract.borderRadius,
     borderTopRightRadius: themeContract.borderRadius,
     borderBottomRightRadius: themeContract.borderRadius,
     borderBottomLeftRadius: themeContract.borderRadius,
-    borderRadius: themeContract.borderRadius,
     // etc.
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
     paddingX: ["paddingLeft", "paddingRight"],
     paddingY: ["paddingTop", "paddingBottom"],
+    margin: ["marginTop", "marginBottom", "marginLeft", "marginRight"],
+    marginX: ["marginLeft", "marginRight"],
+    marginY: ["marginTop", "marginBottom"],
+
     placeItems: ["justifyContent", "alignItems"],
+
     borderTopRadius: ["borderTopLeftRadius", "borderTopRightRadius"],
     borderBottomRadius: ["borderBottomLeftRadius", "borderBottomRightRadius"],
     borderRightRadius: ["borderBottomRightRadius", "borderTopRightRadius"],
     borderLeftRadius: ["borderTopLeftRadius", "borderBottomLeftRadius"],
+    borderRadius: [
+      "borderTopLeftRadius",
+      "borderBottomLeftRadius",
+      "borderBottomRightRadius",
+      "borderTopRightRadius",
+    ],
   },
 });
 
