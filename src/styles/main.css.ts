@@ -1,12 +1,12 @@
 import { style, createGlobalTheme, globalStyle } from "@vanilla-extract/css";
-import { themeContract } from "./themeContracts.css";
+import { colorSchemeContract, themeContract } from "./themeContracts.css";
 import { sizeRelative } from "@utils/etc";
 
 export const theme = createGlobalTheme(":root", themeContract, {
   spacing: {
-    xs: sizeRelative(8),
-    sm: sizeRelative(12),
-    md: sizeRelative(16),
+    xs: sizeRelative(4),
+    sm: sizeRelative(8),
+    md: sizeRelative(12),
     lg: sizeRelative(24),
     xl: sizeRelative(32),
   },
@@ -38,10 +38,13 @@ export const theme = createGlobalTheme(":root", themeContract, {
 
 export const appClassName = style({
   fontFamily: "sans-serif",
+  backgroundColor: colorSchemeContract.background.normal,
+  width: "100vw",
+  height: "100vh",
 });
 
 globalStyle("*", {
   padding: 0,
   margin: 0,
-  boxSizing: "border-box"
+  boxSizing: "border-box",
 });
