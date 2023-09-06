@@ -103,11 +103,11 @@ export const darkScheme = createTheme(colorSchemeContract, {
   },
   error: {
     light: "#f87171",
-    lightTransparent: "null",
+    lightTransparent: "#f8717133",
     normal: "#ef4444",
-    normalTransparent: "null",
+    normalTransparent: "#ef4444",
     dark: "#dc2626",
-    darkTransparent: "null",
+    darkTransparent: "#dc262633",
   },
   warning: {
     light: "#fb923c",

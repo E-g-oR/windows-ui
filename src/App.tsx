@@ -5,15 +5,12 @@ import { clsx } from "@utils/etc";
 import { Button } from "./components/Button/Button";
 
 function App() {
-
   return (
     <div className={clsx(appClassName, darkScheme)}>
       <Typography>
         hello from typography
       </Typography>
-      <Button color="secondary">click me</Button>
-      <Button size="sm" color="secondary">click me</Button>
-      <Button size="xl" color="secondary">click me</Button>
+      <Button variant="clean">click me</Button>
     </div>
   );
 }
