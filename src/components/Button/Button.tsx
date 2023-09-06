@@ -1,8 +1,8 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, ReactNode } from "react";
 import * as styles from "./Button.css";
 
 interface Props {
-  children: string;
+  children: ReactNode;
   variant?: keyof typeof styles.buttonVariants;
   size?: keyof typeof styles.buttonSize;
   color?: keyof typeof styles.buttonColor;
