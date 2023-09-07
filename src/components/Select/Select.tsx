@@ -1,31 +1,33 @@
 import { ReactNode, useRef, useState } from "react";
 import * as styles from "./Select.css";
-import { Button } from "../Button/Button";
-import { usePopoverPosition } from "@/utils/hooks/usePopoverPosition";
+import { usePopoverPosition } from "@utils/hooks/usePopoverPosition";
 
 interface Props<T> {
   value: T;
   items: ReadonlyArray<T>;
   render: (item: T) => ReactNode;
+  onChange: (value: T) => void;
 }
-export function Select<T>({ items, render, value }: Props<T>) {
+
+export function Select<T>({ items, render, value, onChange }: Props<T>) {
   const selectBoxRef = useRef<HTMLDivElement>(null);
-  const parentRef = useRef<HTMLDivElement>(null)
+  const parentRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const a = usePopoverPosition(selectBoxRef, parentRef);
 
   return (
     <div className={styles.select} data-testid={"Select"} ref={parentRef}>
-      <Button
-        variant="clean"
+      <button
+        // variant="clean"
+        className={styles.selectButton()}
         onClick={() => {
           a.checkWindowBorders();
           setIsOpen((prev) => !prev);
         }}
       >
         {render(value)}
-      </Button>
+      </button>
 
       {isOpen && (
         <div
@@ -37,9 +39,16 @@ export function Select<T>({ items, render, value }: Props<T>) {
           }}
         >
           {items.map((item, index) => (
-            <Button variant="clean" key={index}>
+            <button
+              key={index}
+              onClick={() => {
+                onChange(item);
+                setIsOpen(false);
+              }}
+              className={styles.selectButton({ active: item === value })}
+            >
               {render(item)}
-            </Button>
+            </button>
           ))}
         </div>
       )}
