@@ -1,6 +1,6 @@
-import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles";
+import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { themeContract } from "./themeContracts.css";
-import { alignItems, justifyContent, fontWeight } from "@utils/constants";
+import { alignItems, fontWeight, justifyContent } from "@utils/constants";
 
 const responsiveProperties = defineProperties({
   conditions: {
@@ -27,6 +27,10 @@ const responsiveProperties = defineProperties({
     fontSize: themeContract.text,
 
     fontWeight,
+
+    cursor: ["pointer", "not-allowed"],
+
+    gap: themeContract.spacing,
 
     borderTopLeftRadius: themeContract.borderRadius,
     borderTopRightRadius: themeContract.borderRadius,

@@ -1,4 +1,4 @@
-import { style, createGlobalTheme, globalStyle } from "@vanilla-extract/css";
+import { createGlobalTheme, globalStyle, style } from "@vanilla-extract/css";
 import { colorSchemeContract, themeContract } from "./themeContracts.css";
 import { sizeRelative } from "@utils/etc";
 
