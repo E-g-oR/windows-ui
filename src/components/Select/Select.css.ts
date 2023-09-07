@@ -1,10 +1,7 @@
-import { sprinkles } from "@/styles/sprinkles.css";
-import {
-  colorSchemeContract,
-  themeContract,
-} from "@/styles/themeContracts.css";
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { sprinkles } from "@styles/sprinkles.css";
+import { colorSchemeContract, themeContract } from "@styles/themeContracts.css";
 
 export const select = style({
   position: "relative",

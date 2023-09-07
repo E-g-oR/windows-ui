@@ -1,7 +1,7 @@
-import { sprinkles } from "@/styles/sprinkles.css";
-import { colorSchemeContract } from "@/styles/themeContracts.css";
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { sprinkles } from "@styles/sprinkles.css";
+import { colorSchemeContract } from "@styles/themeContracts.css";
 
 export const textField = style([
   sprinkles({ display: "flex", flexDirection: "column" }),

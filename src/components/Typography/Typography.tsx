@@ -1,7 +1,9 @@
-import { FC, createElement, ReactNode } from "react";
+import { createElement, FC, ReactNode } from "react";
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+
 import { clsx } from "@utils/etc";
 import { fontWeight } from "@utils/constants";
+
 import { sprinkles } from "@styles/sprinkles.css";
 import { colorSchemeContract, themeContract } from "@styles/themeContracts.css";
 import * as styles from "./Typography.css";

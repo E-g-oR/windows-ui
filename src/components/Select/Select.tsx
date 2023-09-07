@@ -1,6 +1,8 @@
 import { ReactNode, useRef, useState } from "react";
-import * as styles from "./Select.css";
+
 import { usePopoverPosition } from "@utils/hooks/usePopoverPosition";
+
+import * as styles from "./Select.css";
 
 interface Props<T> {
   value: T;
@@ -39,6 +41,7 @@ export function Select<T>({ items, render, value, onChange }: Props<T>) {
           }}
         >
           {items.map((item, index) => (
+            // TODO: active item indicator (using motion)
             <button
               key={index}
               onClick={() => {

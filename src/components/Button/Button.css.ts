@@ -1,7 +1,7 @@
-import { sprinkles } from "@/styles/sprinkles.css";
-import { colorSchemeContract } from "@/styles/themeContracts.css";
-import { styleVariants } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { styleVariants } from "@vanilla-extract/css";
+import { sprinkles } from "@styles/sprinkles.css";
+import { colorSchemeContract } from "@styles/themeContracts.css";
 
 export const buttonSize = styleVariants({
   sm: [sprinkles({ paddingY: "xs", paddingX: "md", borderRadius: "xs" })],

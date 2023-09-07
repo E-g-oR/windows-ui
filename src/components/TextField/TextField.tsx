@@ -1,7 +1,9 @@
 import { FC } from "react";
-import * as styles from "./TextField.css";
-import { Typography } from "../Typography/Typography";
+
 import { clsx } from "@utils/etc";
+import { Typography } from "../Typography/Typography";
+
+import * as styles from "./TextField.css";
 
 interface Props {
   label?: string;
