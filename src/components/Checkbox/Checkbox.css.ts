@@ -12,7 +12,7 @@ export const checkbox = recipe({
       height: sizeRelative(20),
       borderWidth: 1,
       borderStyle: "solid",
-      transition: "0.1s",
+      transition: "0.2s",
     },
   ],
   variants: {

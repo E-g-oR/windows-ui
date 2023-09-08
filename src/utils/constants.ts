@@ -3,6 +3,7 @@ export const alignItems = [
   "flex-start",
   "center",
   "flex-end",
+  "baseline",
 ] as const;
 export const justifyContent = [
   "stretch",

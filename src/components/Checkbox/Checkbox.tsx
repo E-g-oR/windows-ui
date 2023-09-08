@@ -2,6 +2,7 @@ import { FC } from "react";
 import * as styles from "./Checkbox.css";
 import { Typography } from "../Typography/Typography";
 import { motion } from "framer-motion";
+import { colorSchemeContract } from "@/styles/themeContracts.css";
 
 interface Props {
   checked: boolean;
@@ -29,10 +30,11 @@ export const Checkbox: FC<Props> = ({ checked, onChange, label }) => {
             <motion.path
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              d="M0.5 5.25L4 8.75L11.5 1.25"
-              stroke="#EBEDEF"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              exit={{ pathLength: 0 }}
+              d={"M0.5 5.25L4 8.75L11.5 1.25"}
+              stroke={colorSchemeContract.background.normal}
+              stroke-linecap={"round"}
+              stroke-linejoin={"round"}
             />
           )}
         </svg>
