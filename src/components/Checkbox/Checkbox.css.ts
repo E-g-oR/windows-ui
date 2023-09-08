@@ -22,7 +22,7 @@ export const checkbox = recipe({
         borderColor: colorSchemeContract.primary.normal,
       },
       false: {
-        borderColor: colorSchemeContract.background.light,
+        borderColor: colorSchemeContract.text.light,
       },
     },
   },

@@ -1,10 +1,10 @@
-import { FC, Fragment, useMemo, useRef } from "react";
-import * as styles from "./Radio.css";
-import { Typography } from "../Typography/Typography";
-import { sprinkles } from "@/styles/sprinkles.css";
-import { checkbox, label } from "../Checkbox/Checkbox.css";
-import { clsx } from "@/utils/etc";
+import { FC, Fragment } from "react";
 import { motion } from "framer-motion";
+import { Typography } from "../Typography/Typography";
+import { checkbox, label } from "../Checkbox/Checkbox.css";
+import { clsx } from "@utils/etc";
+import { sprinkles } from "@styles/sprinkles.css";
+import * as styles from "./Radio.css";
 
 interface Props {
   item: { title: string; value: number | string };

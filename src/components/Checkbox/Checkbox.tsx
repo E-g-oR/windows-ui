@@ -16,7 +16,14 @@ export const Checkbox: FC<Props> = ({ checked, onChange, label }) => {
         className={styles.input}
         type={"checkbox"}
         checked={checked}
-        onChange={(e) => onChange(e.target.checked)}
+        onChange={(e) => {
+          onChange(e.target.checked);
+        }}
+        onKeyDown={(e) => {
+          if (e.code === "Enter") {
+            onChange(!checked);
+          }
+        }}
       />
       <div className={styles.checkbox({ checked })}>
         <svg

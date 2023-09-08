@@ -1,9 +1,8 @@
-import { theme } from "@/styles/main.css";
-import { sprinkles } from "@/styles/sprinkles.css";
-import { colorSchemeContract, themeContract } from "@/styles/themeContracts.css";
-import { sizeRelative } from "@/utils/etc";
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { sizeRelative } from "@utils/etc";
+import { sprinkles } from "@styles/sprinkles.css";
+import { colorSchemeContract, themeContract } from "@styles/themeContracts.css";
 
 export const radio = sprinkles({
   display: "flex",
