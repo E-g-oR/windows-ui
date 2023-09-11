@@ -14,6 +14,7 @@ const responsiveProperties = defineProperties({
     flexDirection: ["row", "row-reverse", "column", "column-reverse"],
     justifyContent,
     alignItems,
+    alignSelf: alignItems,
 
     paddingTop: themeContract.spacing,
     paddingBottom: themeContract.spacing,

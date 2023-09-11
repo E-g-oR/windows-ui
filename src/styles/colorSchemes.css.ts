@@ -95,11 +95,11 @@ export const darkScheme = createTheme(colorSchemeContract, {
   },
   success: {
     light: "#34d399",
-    lightTransparent: "null",
+    lightTransparent: "#34d39933",
     normal: "#10b981",
-    normalTransparent: "null",
+    normalTransparent: "#10b98133",
     dark: "#059669",
-    darkTransparent: "null",
+    darkTransparent: "#05966933",
   },
   error: {
     light: "#f87171",
@@ -111,10 +111,10 @@ export const darkScheme = createTheme(colorSchemeContract, {
   },
   warning: {
     light: "#fb923c",
-    lightTransparent: "null",
+    lightTransparent: "#fb923c33",
     normal: "#f59e0b",
-    normalTransparent: "null",
+    normalTransparent: "#f59e0b33",
     dark: "#ea580c",
-    darkTransparent: "null",
+    darkTransparent: "#ea580c33",
   },
 });
