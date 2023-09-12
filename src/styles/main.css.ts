@@ -11,11 +11,11 @@ export const theme = createGlobalTheme(":root", themeContract, {
     xl: sizeRelative(32),
   },
   blur: {
-    xs: sizeRelative(8),
-    sm: sizeRelative(12),
-    md: sizeRelative(16),
-    lg: sizeRelative(24),
-    xl: sizeRelative(32),
+    xs: `blur(${sizeRelative(8)})`,
+    sm: `blur(${sizeRelative(12)})`,
+    md: `blur(${sizeRelative(16)})`,
+    lg: `blur(${sizeRelative(24)})`,
+    xl: `blur(${sizeRelative(32)})`,
   },
   borderRadius: {
     xs: sizeRelative(3),

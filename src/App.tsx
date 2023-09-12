@@ -1,15 +1,15 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
-import { clsx } from "@utils/etc";
-import { appClassName } from "@styles/main.css";
-import { darkScheme } from "@styles/colorSchemes.css";
 import { Toggle } from "@components/Toggle/Toggle";
-import Chip from "./components/Chip";
+import { NotificationsContext } from "./components/Notifications/Notifications";
+import { Button } from "./components/Button/Button";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
+  const { showNotification } = useContext(NotificationsContext);
+
   return (
-    <div className={clsx(appClassName, darkScheme)}>
+    <div>
       <Toggle
         checked={isDark}
         onChange={setIsDark}
@@ -18,7 +18,7 @@ function App() {
         textOn="Is on."
         textOff="Is off."
       />
-      <Chip label="hello in chip"/>
+      <Button onClick={()=> showNotification({body: "hello"})}>Show notification</Button>
     </div>
   );
 }

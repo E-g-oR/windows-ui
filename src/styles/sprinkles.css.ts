@@ -1,4 +1,4 @@
-import { createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
+import { ConditionalValue, createSprinkles, defineProperties } from "@vanilla-extract/sprinkles";
 import { themeContract } from "./themeContracts.css";
 import { alignItems, fontWeight, justifyContent } from "@utils/constants";
 
@@ -66,3 +66,8 @@ export const sprinkles = createSprinkles(responsiveProperties);
 
 // It's a good idea to export the Sprinkles type too
 export type Sprinkles = Parameters<typeof sprinkles>[0];
+
+export type ResponsiveValue<Value extends string | number> = ConditionalValue<
+  typeof responsiveProperties,
+  Value
+>;

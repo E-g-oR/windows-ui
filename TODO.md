@@ -8,11 +8,11 @@
 - ~~Select~~
 - ~~Typography~~
 - ~~Chip~~
-- Stack
+- ~~Stack~~ _Decided not to do_
 - IconButton
 - Divider
 - Modal
-- Notifications
+- ~~Notifications~~
 - Table
 - LinearProgress
 - CircularProgress

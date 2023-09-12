@@ -33,7 +33,7 @@ export const themeContract = createThemeContract({
   spacing: size,
   blur: size,
   borderRadius: size,
-  text: typographySize
+  text: typographySize,
 });
 
 export const colorSchemeContract = createThemeContract({
