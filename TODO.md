@@ -14,7 +14,7 @@
 - Modal
 - ~~Notifications~~
 - Table
-- LinearProgress
-- CircularProgress
+- ~~LinearProgress~~
+- ~~CircularProgress~~
 - Tabs
 - Menu (with submenu)
