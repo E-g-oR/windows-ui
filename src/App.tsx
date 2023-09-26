@@ -1,8 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 
 import { Toggle } from "@components/Toggle/Toggle";
 import { NotificationsContext } from "./components/Notifications/Notifications";
 import { Button } from "./components/Button/Button";
+import { CircularProgress, LinearProgress } from "./components/Progress/Progress";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -18,7 +19,11 @@ function App() {
         textOn="Is on."
         textOff="Is off."
       />
-      <Button onClick={()=> showNotification({body: "hello"})}>Show notification</Button>
+      <CircularProgress max={100} value={50} />
+      <LinearProgress max={50} value={30}/>
+      <Button 
+      onClick={()=> showNotification({body: "hello"})}
+      >Show notification</Button>
     </div>
   );
 }
